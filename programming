@@ -1,0 +1,26 @@
+using System;
+using System.Linq;
+
+class Program
+{
+    static void Main()
+    {
+        string input1 = "The weather is so sunny nowadays";
+        string input2 = "Life is so beautiful";
+
+        Console.WriteLine(ReverseSentence(input1));
+        Console.WriteLine(ReverseSentence(input2));
+    }
+
+    static string ReverseSentence(string input)
+    {
+        // Split the input string into words
+        string[] words = input.Split(' ');
+
+        // Reverse the array of words
+        Array.Reverse(words);
+
+        // Join the reversed array of words back into a single string
+        return string.Join(" ", words);
+    }
+}
